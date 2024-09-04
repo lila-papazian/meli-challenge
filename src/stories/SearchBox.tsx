@@ -1,4 +1,3 @@
-import React from "react";
 import "./searchBox.scss";
 import IconSearch from "../assets/IconSearch.png";
 export interface SearchBoxProps {
