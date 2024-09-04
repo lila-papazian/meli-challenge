@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "MercadoLibre",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
