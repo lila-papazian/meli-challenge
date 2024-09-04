@@ -1,0 +1,36 @@
+.product-buy-section {
+  display: flex;
+  background-color: pink;
+  column-gap: 16px;
+  margin: 0;
+
+  &__image {
+    flex-grow: 7;
+  }
+
+  &__content {
+    margin: inherit;
+    flex-grow: 5;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 032px 32px 0;
+    row-gap: 32px;
+  }
+
+  &__status {
+    margin: inherit;
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: -16px; /* Negative margin to reduce gap between status and title */
+  }
+
+  &__title {
+    margin: inherit;
+    font-size: 24px;
+  }
+
+  &__price {
+    margin: inherit;
+    font-size: 46px;
+  }
+}
