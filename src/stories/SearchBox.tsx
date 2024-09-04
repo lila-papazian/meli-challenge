@@ -1,5 +1,6 @@
+import React from "react";
 import "./searchBox.scss";
-import searchIcon from "../assets/ic_Search.png";
+import IconSearch from "../assets/IconSearch.png";
 export interface SearchBoxProps {
   placeholder: string;
   ariaLabel: string;
@@ -16,7 +17,7 @@ export const SearchBox = ({ placeholder, ariaLabel }: SearchBoxProps) => (
       placeholder={placeholder}
     />
     <button className='search-input__icon' aria-label="Buscar">
-      <img src={searchIcon} alt="Buscar" />
+      <img src={IconSearch} alt="Buscar" />
     </button>
   </div>
 );
