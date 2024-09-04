@@ -16,12 +16,17 @@ export const ProductCard = ({
   title,
   location,
 }: ProductCardProps) => {
+  const options: Intl.NumberFormatOptions = {
+    style: "currency",
+    currency: "ARS",
+    minimumFractionDigits: 0,
+  };
   return (
     <div className='product-card'>
       <img className='product-card__image' src={productImageUrl} alt={title} />
       <div className='product-card__content'>
         <div className='product-card__price'>
-          <span>{price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS', minimumFractionDigits: 0})}</span>
+          <span>{price.toLocaleString("es-AR", options)}</span>
           {freeShipping && <img src={IconShipping} alt='Envío gratis' />}
         </div>
         <h2 className='product-card__title'>{title}</h2>
