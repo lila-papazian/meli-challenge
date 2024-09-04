@@ -1,0 +1,21 @@
+@mixin focus-outline($color: #007bff, $radius: 4px) {
+    outline: 2px solid $color; // Custom outline color
+    border-radius: $radius; // Rounded outline corners
+  }
+
+.button {
+    background-color: #3483FA;
+    color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px; // Add padding to make the button more clickable
+    outline: none;
+    border: none;
+
+    border-radius: 4px;
+
+    &:focus {
+        @include focus-outline;
+      }
+}
