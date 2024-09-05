@@ -1,26 +1,28 @@
 import "./productCard.scss";
 import IconShipping from "../assets/ic_shipping.png";
-import { SearchResponseItem } from "../types/SearchResponse";
+import { Item } from "../types/endpointResponses/Item";
 
 export interface ProductCardProps {
   onClick: (id: string) => void;
-  item: SearchResponseItem;
+  item: Item;
 }
 
 export const ProductCard = ({ onClick, item }: ProductCardProps) => {
-  const { thumbnail, price, shipping, title } = item;
+  const { picture, price, freeShipping, title } = item;
+
   const options: Intl.NumberFormatOptions = {
     style: "currency",
-    currency: "ARS",
-    minimumFractionDigits: 0,
+    currency: price.currency,
+    minimumFractionDigits: price.decimals,
   };
+
   return (
     <div className='product-card' onClick={() => onClick("ejemplo")}>
-      <img className='product-card__image' src={thumbnail} alt={title} />
+      <img className='product-card__image' src={picture} alt={title} />
       <div className='product-card__content'>
         <div className='product-card__price'>
-          <span>{price.toLocaleString("es-AR", options)}</span>
-          {shipping.free_shipping && <img src={IconShipping} alt='Envío gratis' />}
+          <span>{price.amount.toLocaleString("es-AR", options)}</span>
+          {freeShipping && <img src={IconShipping} alt='Envío gratis' />}
         </div>
         <h2 className='product-card__title'>{title}</h2>
       </div>
