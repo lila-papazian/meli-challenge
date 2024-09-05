@@ -12,6 +12,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    searchInput: "",
     placeholder: "Nunca dejes de buscar",
     ariaLabel: "Buscador de productos",
     onClick: (inputValue: string) => {
