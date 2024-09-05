@@ -12,10 +12,17 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    price: 5000,
-    freeShipping: true,
-    title: "Apple Iphone Nuevo",
-    location: "Mendoza",
-    productImageUrl: "https://placehold.co/180",
+    onClick: (id: string) => console.log(id),
+    item: {
+      id: "ID",
+      title: "Apple Iphone Nuevo",
+      condition: "Nuevo",
+      currency_id: "ARS",
+      price: 5000,
+      shipping: {
+        free_shipping: true,
+      },
+      thumbnail: "https://placehold.co/180",
+    },
   },
 };
