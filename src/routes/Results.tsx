@@ -5,7 +5,7 @@ import "./resultsScreen.scss";
 import { useLoaderData } from "react-router-dom";
 
 const Results = () => {
-  const response: SearchByQueryResults = useLoaderData();
+  const response = useLoaderData() as SearchByQueryResults;
 
   const handleClick = (productId: string) => {
     // TODO: implementation

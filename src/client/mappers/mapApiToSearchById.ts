@@ -21,8 +21,8 @@ const mapApiToSearchById = (
       },
       picture: item.pictures[0].url,
       condition: item.condition,
-      free_shipping: item.shipping.free_shipping,
-      sold_quantity: item.initial_quantity,
+      freeShipping: item.shipping.free_shipping,
+      soldQuantity: item.initial_quantity,
       description: description.plain_text,
     },
   };
