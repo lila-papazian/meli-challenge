@@ -1,3 +1,5 @@
+import { Shipping } from "./Shipping";
+
 export interface SearchResponseItem {
   id: string;
   title: string;
@@ -6,8 +8,4 @@ export interface SearchResponseItem {
   price: number;
   shipping: Shipping;
   thumbnail: string;
-}
-
-interface Shipping {
-  free_shipping: boolean;
 }
