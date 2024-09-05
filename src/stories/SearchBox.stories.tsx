@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { SearchBox } from './SearchBox';
+import { SearchBox } from "./SearchBox";
 
 const meta = {
   component: SearchBox,
@@ -13,6 +13,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     placeholder: "Nunca dejes de buscar",
-    ariaLabel: "Buscador de productos"
-  }
+    ariaLabel: "Buscador de productos",
+    onClick: (inputValue: string) => {
+      console.log(inputValue);
+    },
+  },
 };
