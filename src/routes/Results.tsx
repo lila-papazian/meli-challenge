@@ -1,11 +1,11 @@
 import Layout from "../components/Layout";
 import { ProductCard } from "../stories/ProductCard";
-import { SearchResponseItem } from "../types/SearchResponse";
+import { SearchByQueryResults } from "../types/endpointResponses/SearchByQueryResults";
 import "./resultsScreen.scss";
 import { useLoaderData } from "react-router-dom";
 
 const Results = () => {
-  const response = useLoaderData() as SearchResponseItem[];
+  const response: SearchByQueryResults = useLoaderData();
 
   const handleClick = (productId: string) => {
     // TODO: implementation
@@ -15,7 +15,7 @@ const Results = () => {
   return (
     <Layout>
       <ul role='tablist' className='results-screen'>
-        {response.map((item) => {
+        {response.items.map((item) => {
           return (
             <li role='tab' tabIndex={0} key={item.id}>
               <ProductCard onClick={() => handleClick(item.id)} item={item} />
