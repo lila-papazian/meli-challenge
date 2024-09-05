@@ -1,0 +1,12 @@
+$radius: 4px;
+$blue-primary: #3483fa;
+$yellow-primary: #FFE600;
+$gray-primary: #999999;
+$gray-dark: #666666;
+$gray-light: #EEEEEE;
+$gray-extra-dark: #333333;
+
+@mixin focus-outline($color: $blue-primary, $radius: $radius) {
+  outline: 2px solid $color;
+  border-radius: $radius;
+}

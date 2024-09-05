@@ -1,5 +1,7 @@
+@use "commons" as commons;
+
 .header {
-  background-color: #ffe600;
+  background-color: commons.$yellow-primary;
 
   display: flex;
   align-items: center;
