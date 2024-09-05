@@ -1,12 +1,13 @@
+import { Maybe } from "../types/Maybe";
 import "./productDescription.scss"
 export interface ProductDescriptionProps {
   title?: string;
-  description: string;
+  description: Maybe<string>;
 }
 
 export const ProductDescription = ({
   title = "Descripción del producto",
-  description,
+  description = "Descripción no disponible",
 }: ProductDescriptionProps) => {
   return (
     <div className="product-description">

@@ -1,0 +1,6 @@
+.container {
+    margin-top: 14px;
+    background-color: white;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+}

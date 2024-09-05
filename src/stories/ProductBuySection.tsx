@@ -1,37 +1,33 @@
+import { Item } from "../types/endpointResponses/Item";
+import { Button } from "./Button";
 import "./productBuySection.scss";
 
 export interface ProductBuySectionProps {
-  productImageUrl: string;
-  status: string;
-  title: string;
-  price: number;
+  item: Item;
 }
 
-export const ProductBuySection = ({
-  productImageUrl,
-  status,
-  title,
-  price,
-}: ProductBuySectionProps) => {
+export const ProductBuySection = ({ item }: ProductBuySectionProps) => {
+  const { picture, condition, soldQuantity, title, price } = item;
+  const { amount, currency, decimals } = price;
+
   const options: Intl.NumberFormatOptions = {
     style: "currency",
-    currency: "ARS",
-    minimumFractionDigits: 0,
+    currency: currency,
+    minimumFractionDigits: decimals,
   };
+
   return (
     <div className='product-buy-section'>
-      <img
-        className='product-buy-section__image'
-        src={productImageUrl}
-        alt={title}
-      />
+      {picture && <img className='product-buy-section__image' src={picture} alt={title} />}
       <div className='product-buy-section__content'>
-        <p className='product-buy-section__status'>{status}</p>
+        <p className='product-buy-section__status'>
+          {condition} - {soldQuantity} vendidos{" "}
+        </p>
         <h2 className='product-buy-section__title'>{title}</h2>
         <p className='product-buy-section__price'>
-          {price.toLocaleString("es-AR", options)}
+          {amount.toLocaleString("es-AR", options)}
         </p>
-        <button className='product-buy-section__button'>Comprar</button>
+        <Button label='Comprar' onClick={() => {}} />
       </div>
     </div>
   );
