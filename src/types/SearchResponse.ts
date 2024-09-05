@@ -5,6 +5,7 @@ export interface SearchResponseItem {
   currency_id: string;
   price: number;
   shipping: Shipping;
+  thumbnail: string;
 }
 
 interface Shipping {
