@@ -7,17 +7,22 @@ import { useLoaderData } from "react-router-dom";
 const Results = () => {
   const response = useLoaderData() as SearchResponseItem[];
 
+  const handleClick = (productId: string) => {
+    // TODO: implementation
+    console.log(productId);
+  };
+
   return (
     <Layout>
-      {response.map((item) => (
-        <ProductCard
-          key={item.id}
-          title={item.title}
-          price={item.price}
-          freeShipping={item.shipping.free_shipping}
-          productImageUrl={item.thumbnail}
-        />
-      ))}
+      <ul role='tablist' className='results-screen'>
+        {response.map((item) => {
+          return (
+            <li role='tab' tabIndex={0} key={item.id}>
+              <ProductCard onClick={() => handleClick(item.id)} item={item} />
+            </li>
+          );
+        })}
+      </ul>
     </Layout>
   );
 };

@@ -1,0 +1,13 @@
+@mixin focus-outline($color: #007bff, $radius: 4px) {
+  outline: 2px solid $color; // Custom outline color
+  border-radius: $radius; // Rounded outline corners
+}
+.results-screen {
+  li[role="tab"] {
+    list-style-type: none;
+  }
+
+  li[role="tab"]:focus {
+    @include focus-outline;
+  }
+}
