@@ -6,9 +6,10 @@ import { ProductDescription } from "../stories/ProductDescription";
 import "./productDetail.scss";
 import { Maybe } from "../types/Maybe";
 import { Fragment } from "react/jsx-runtime";
+import { Breadcrumb } from "../stories/Breadcrumb";
 const ProductDetail = () => {
   const productDetail = useLoaderData() as SearchByItemResults;
-  const { item } = productDetail;
+  const { item, categories } = productDetail;
 
   const formatPlainText = (text: Maybe<string>) => {
     return text
@@ -22,6 +23,7 @@ const ProductDetail = () => {
 
   return (
     <Layout>
+      <Breadcrumb crumbs={categories} />
       <div className='product-details__container' tabIndex={0}>
         <ProductBuySection
           className='product-details__product-info'
