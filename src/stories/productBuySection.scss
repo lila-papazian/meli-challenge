@@ -3,11 +3,14 @@
 .product-buy-section {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 1;
   grid-column-gap: 16px;
 
-  &__image {
-    grid-column: 1/7;
+  &__image-container {
+    padding: 16px;
+    display: flex;
+    grid-column: 1 / 7;
+    justify-content: center;
+    align-items: center;
   }
 
   &__content {
