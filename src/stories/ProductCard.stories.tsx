@@ -16,13 +16,14 @@ export const Default: Story = {
     item: {
       id: "ID",
       title: "Apple Iphone Nuevo",
-      condition: "Nuevo",
-      currency_id: "ARS",
-      price: 5000,
-      shipping: {
-        free_shipping: true,
+      price: {
+        currency: "ARS",
+        amount: 5000,
+        decimals: 0,
       },
-      thumbnail: "https://placehold.co/180",
+      picture: "https://placehold.co/180",
+      condition: "Nuevo",
+      freeShipping: true,
     },
   },
 };
