@@ -7,9 +7,9 @@ export interface BreadcrumbProps {
 export const Breadcrumb = ({ crumbs }: BreadcrumbProps) => {
   return (
     <div className='breadcrumb'>
-      <ul className='breadcrumb__list'>
+      <ul className='breadcrumb__list' role="list" tabIndex={0}>
         {crumbs.map((crumb, index) => (
-          <li key={index} className='breadcrumb__item'>
+          <li role="listitem" key={index} className='breadcrumb__item'>
             {crumb}
           </li>
         ))}

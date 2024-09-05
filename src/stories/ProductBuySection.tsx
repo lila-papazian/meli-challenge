@@ -22,18 +22,18 @@ export const ProductBuySection = ({
   };
 
   return (
-    <div key={id} className={`product-buy-section ${className ? className : ""}`}>
+    <div key={id} className={`product-buy-section ${className ? className : ""}`} tabIndex={0} aria-label="Product buy section">
       {picture && (
-        <div className='product-buy-section__image-container'>
+        <div className='product-buy-section__image-container' tabIndex={0}>
           <img src={picture} alt={title} width={680} />
         </div>
       )}
-      <div className='product-buy-section__content'>
-        <p className='product-buy-section__status'>
+      <div className='product-buy-section__content' tabIndex={0}>
+        <p className='product-buy-section__status' tabIndex={0}>
           {condition} - {soldQuantity} vendidos{" "}
         </p>
-        <h2 className='product-buy-section__title'>{title}</h2>
-        <p className='product-buy-section__price'>
+        <h2 className='product-buy-section__title' tabIndex={0}>{title}</h2>
+        <p className='product-buy-section__price' tabIndex={0}>
           {amount.toLocaleString("es-AR", options)}
         </p>
         <Button label='Comprar' onClick={() => {}} />

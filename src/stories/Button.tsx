@@ -6,5 +6,5 @@ export interface ButtonProps {
 }
 
 export const Button = ({label, onClick}: ButtonProps) => {
-    return <button className="button" onClick={onClick} aria-label="Comprar">{label}</button>
+    return <button className="button" onClick={onClick} aria-label="Comprar" tabIndex={0}>{label}</button>
 }

@@ -14,7 +14,7 @@ export const ProductDescription = ({
   className,
 }: ProductDescriptionProps) => {
   return (
-    <div className={`product-description ${className ? className : ""}`}>
+    <div className={`product-description ${className ? className : ""}`} tabIndex={0} aria-label="product description">
       <h1 className='product-description__title'>{title}</h1>
       <p className='product-description__description'>{description}</p>
     </div>
