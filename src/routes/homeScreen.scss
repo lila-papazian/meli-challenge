@@ -1,6 +1,5 @@
-.home {
-  &__header {
-    grid-column-start: 1;
-    grid-column-end: 4;
-  }
+.no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

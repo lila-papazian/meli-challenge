@@ -1,3 +1,4 @@
+import { CategoriesResponse } from "../../types/apiResponses/CategoriesResponse";
 import { DescriptionResponse } from "../../types/apiResponses/DescriptionResponse";
 import { ItemResponse } from "../../types/apiResponses/ItemResponse";
 import { SearchByItemResults } from "../../types/endpointResponses/SearchByItemResults";
@@ -5,12 +6,12 @@ import { authorField } from "../utils";
 
 const mapApiToSearchById = (
   item: ItemResponse,
-  description: DescriptionResponse
+  description: DescriptionResponse,
+  categoriesResponse: CategoriesResponse,
 ): SearchByItemResults => {
-  // implementation here
   return {
     author: authorField,
-    categories: [],
+    categories: categoriesResponse.path_from_root.map((category) => category.name),
     item: {
       id: item.id,
       title: item.title,

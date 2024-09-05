@@ -8,7 +8,7 @@ export interface Item {
   };
   picture: string;
   condition: string;
-  freeShipping: boolean;
+  freeShipping?: boolean;
   soldQuantity?: number;
   description?: string;
 }

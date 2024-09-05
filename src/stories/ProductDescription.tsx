@@ -1,17 +1,22 @@
-import "./productDescription.scss"
+import React from "react";
+import { Maybe } from "../types/Maybe";
+import "./productDescription.scss";
+
 export interface ProductDescriptionProps {
   title?: string;
-  description: string;
+  description: React.JSX.Element[] | string;
+  className?: Maybe<string>;
 }
 
 export const ProductDescription = ({
   title = "Descripción del producto",
-  description,
+  description = "No hay descripción disponible.",
+  className,
 }: ProductDescriptionProps) => {
   return (
-    <div className="product-description">
-      <h1 className="product-description__title">{title}</h1>
-      <p className="product-description__description">{description}</p>
+    <div className={`product-description ${className ? className : ""}`} tabIndex={0} aria-label="product description">
+      <h1 className='product-description__title'>{title}</h1>
+      <p className='product-description__description'>{description}</p>
     </div>
   );
 };

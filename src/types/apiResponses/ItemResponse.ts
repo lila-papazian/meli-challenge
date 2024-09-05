@@ -9,6 +9,7 @@ export interface ItemResponse {
   condition: string;
   pictures: Picture[];
   shipping: Shipping;
+  category_id: string;
 }
 
 interface Picture {
