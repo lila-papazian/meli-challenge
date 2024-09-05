@@ -1,21 +1,18 @@
-@mixin focus-outline($color: #007bff, $radius: 4px) {
-    outline: 2px solid $color; // Custom outline color
-    border-radius: $radius; // Rounded outline corners
-  }
+@use "commons" as commons;
 
 .button {
-    background-color: #3483FA;
-    color: #EEEEEE;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px; // Add padding to make the button more clickable
-    outline: none;
-    border: none;
+  background-color: commons.$blue-primary;
+  color: commons.$gray-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px; // Add padding to make the button more clickable
+  outline: none;
+  border: none;
 
-    border-radius: 4px;
+  border-radius: commons.$radius;
 
-    &:focus {
-        @include focus-outline;
-      }
+  &:focus {
+    @include commons.focus-outline;
+  }
 }

@@ -1,26 +1,23 @@
-@mixin focus-outline($color: #007bff, $radius: 4px) {
-  outline: 2px solid $color; // Custom outline color
-  border-radius: $radius; // Rounded outline corners
-}
+@use "commons" as commons;
 
 .search-input {
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: commons.$radius;
   width: 100%;
 
   &__icon {
     flex-shrink: 0;
     fill: #888;
     height: 100%;
-    background-color: #eee;
+    background-color: commons.$gray-light;
     padding: 16px;
     outline: none;
     border: none;
 
     &:focus {
-      @include focus-outline;
+      @include commons.focus-outline;
     }
   }
 
@@ -33,7 +30,7 @@
     padding: 16px;
 
     ::placeholder {
-      color: #999999;
+      color: commons.$gray-primary;
     }
 
     // Hide the clear button in WebKit browsers
@@ -48,7 +45,7 @@
     }
 
     &:focus {
-      @include focus-outline;
+      @include commons.focus-outline;
     }
   }
 }

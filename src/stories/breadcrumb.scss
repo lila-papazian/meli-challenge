@@ -1,8 +1,10 @@
+@use 'commons' as commons;
+
 .breadcrumb {
   margin: 14px 0;
   font-size: 14px;
   // Color doesn't pass accessibility
-  color: #999999;
+  color: commons.$gray-primary;
   display: flex;
 
   &__list {
