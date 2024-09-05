@@ -1,11 +1,12 @@
 import "./header.scss";
 import LogoML from "../assets/Logo_ML.png";
 import { SearchBox } from "./SearchBox";
+import { Maybe } from "../types/Maybe";
 
 export interface HeaderProps {
   onSearch: (query: string) => void;
   className?: string;
-  searchInput?: string | null | undefined;
+  searchInput?: Maybe<string>;
 
 }
 

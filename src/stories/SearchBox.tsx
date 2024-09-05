@@ -1,10 +1,11 @@
 import "./searchBox.scss";
 import IconSearch from "../assets/IconSearch.png";
 import { useState } from "react";
+import { Maybe } from "../types/Maybe";
 
 // TODO: Create a Maybe type for this cases
 export interface SearchBoxProps {
-  searchInput?: string | null | undefined;
+  searchInput?: Maybe<string>;
   placeholder: string;
   ariaLabel: string;
   onClick: (inputValue: string) => void;
