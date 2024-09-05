@@ -1,15 +1,6 @@
-type QueryParams = Record<string, string>;
-
-export async function fetchData(
-  endpoint: string,
-  queryParams: QueryParams = {}
-) {
+export async function fetchData(endpoint: string) {
   try {
     const url = new URL(endpoint);
-    Object.keys(queryParams).forEach((key) =>
-      url.searchParams.append(key, queryParams[key])
-    );
-
     const response = await fetch(url.toString());
 
     if (!response.ok) {

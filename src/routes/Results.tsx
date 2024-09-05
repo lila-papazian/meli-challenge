@@ -2,14 +2,13 @@ import Layout from "../components/Layout";
 import { ProductCard } from "../stories/ProductCard";
 import { SearchByQueryResults } from "../types/endpointResponses/SearchByQueryResults";
 import "./resultsScreen.scss";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const Results = () => {
   const response = useLoaderData() as SearchByQueryResults;
-
+  const navigate = useNavigate();
   const handleClick = (productId: string) => {
-    // TODO: implementation
-    console.log(productId);
+    navigate( `/items/${productId}`);
   };
 
   return (

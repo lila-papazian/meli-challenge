@@ -7,7 +7,6 @@ const mapApiToSearchById = (
   item: ItemResponse,
   description: DescriptionResponse
 ): SearchByItemResults => {
-  // implementation here
   return {
     author: authorField,
     categories: [],
