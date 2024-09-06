@@ -8,4 +8,14 @@
   li[role="tab"]:focus {
     @include commons.focus-outline;
   }
+
+  &__no-results {
+    height: 100svh;
+    width: 100svw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
+
