@@ -1,0 +1,18 @@
+@use "commons" as commons;
+
+.button {
+  background-color: commons.$blue-primary;
+  color: commons.$gray-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px; // Add padding to make the button more clickable
+  outline: none;
+  border: none;
+
+  border-radius: commons.$radius;
+
+  &:focus {
+    @include commons.focus-outline;
+  }
+}

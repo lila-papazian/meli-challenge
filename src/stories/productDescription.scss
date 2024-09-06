@@ -1,0 +1,20 @@
+@use "commons" as commons;
+
+.product-description {
+    padding-left: 32px;
+
+    &__title {
+        font-size: 28px;
+        color: commons.$gray-extra-dark;
+        padding-bottom: 32px;
+        margin: 0;
+    }
+
+    &__description{ 
+        font-size: 16px;
+        // This color doesn't pass accessibility standards
+        color: commons.$gray-primary;
+        padding-bottom: 32px;
+        margin: 0;
+    }
+}

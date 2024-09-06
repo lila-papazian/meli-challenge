@@ -1,0 +1,42 @@
+@use "commons" as commons;
+
+.product-buy-section {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-column-gap: 16px;
+
+  &__image-container {
+    padding: 16px;
+    display: flex;
+    grid-column: 1 / 7;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    flex-grow: 5;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 32px 32px 0;
+    row-gap: 32px;
+    grid-column: 7/10;
+  }
+
+  &__status {
+    margin: inherit;
+    font-size: 14px;
+    color: commons.$gray-primary;
+    margin-bottom: -16px; /* Negative margin to reduce gap between status and title */
+  }
+
+  &__title {
+    margin: inherit;
+    font-size: 24px;
+    overflow-wrap: break-word;
+  }
+
+  &__price {
+    margin: inherit;
+    font-size: 46px;
+  }
+}

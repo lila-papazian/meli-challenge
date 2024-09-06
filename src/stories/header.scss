@@ -1,0 +1,21 @@
+@use "commons" as commons;
+
+.header {
+  background-color: commons.$yellow-primary;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  padding: 16px;
+
+  &__icon {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__search-box {
+    min-width: none;
+    width: calc((9 / 12) * 100vw);
+  }
+}

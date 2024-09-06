@@ -1,0 +1,51 @@
+@use "commons" as commons;
+
+.search-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: commons.$radius;
+  width: 100%;
+
+  &__icon {
+    flex-shrink: 0;
+    fill: #888;
+    height: 100%;
+    background-color: commons.$gray-light;
+    padding: 16px;
+    outline: none;
+    border: none;
+
+    &:focus {
+      @include commons.focus-outline;
+    }
+  }
+
+  &__input {
+    flex-grow: 1;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: black;
+    padding: 16px;
+
+    ::placeholder {
+      color: commons.$gray-primary;
+    }
+
+    // Hide the clear button in WebKit browsers
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+  
+    // Hide the clear button in Firefox
+    &::-moz-search-clear-button {
+      display: none;
+    }
+
+    &:focus {
+      @include commons.focus-outline;
+    }
+  }
+}

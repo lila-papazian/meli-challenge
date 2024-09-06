@@ -1,0 +1,11 @@
+@use "../stories/commons" as commons;
+
+.results-screen {
+  li[role="tab"] {
+    list-style-type: none;
+  }
+
+  li[role="tab"]:focus {
+    @include commons.focus-outline;
+  }
+}

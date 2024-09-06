@@ -1,0 +1,15 @@
+meta {
+  name: Search product description
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://api.mercadolibre.com/items/:id/description
+  body: none
+  auth: none
+}
+
+params:path {
+  id: 
+}

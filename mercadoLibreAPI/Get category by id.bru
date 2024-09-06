@@ -1,0 +1,15 @@
+meta {
+  name: Get category by id
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://api.mercadolibre.com/categories/:category
+  body: none
+  auth: none
+}
+
+params:path {
+  category: MLA1652
+}
