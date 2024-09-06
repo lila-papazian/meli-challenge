@@ -12,7 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    errorElement: <Error />
+    errorElement: <Error />,
   },
   {
     path: "/items",
@@ -24,8 +24,9 @@ const router = createBrowserRouter([
     element: <ProductDetail />,
     loader: ({ params }) => {
       return itemDetailLoader(params.id!);
-    }
-  }
+    },
+    errorElement: <Error />,
+  },
 ]);
 
 createRoot(document.getElementById("root")!).render(

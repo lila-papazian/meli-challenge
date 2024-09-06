@@ -11,7 +11,7 @@ export async function fetchData(endpoint: string) {
     return data;
   } catch (error) {
     console.error("Error fetching data:", error);
-    return null;
+    throw new Response("Error fetching data", { status: 500, statusText: (error as Error).message });
   }
 }
 
