@@ -3,7 +3,6 @@ import IconSearch from "../assets/IconSearch.png";
 import { useState } from "react";
 import { Maybe } from "../types/Maybe";
 
-// TODO: Create a Maybe type for this cases
 export interface SearchBoxProps {
   searchInput?: Maybe<string>;
   placeholder: string;

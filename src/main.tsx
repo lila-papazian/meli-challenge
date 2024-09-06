@@ -6,11 +6,13 @@ import Home from "./routes/Home";
 import Results from "./routes/Results";
 import { itemDetailLoader, itemsLoader } from "./routes/loaders";
 import ProductDetail from "./routes/ProductDetail";
+import Error from "./routes/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <Error />,
   },
   {
     path: "/items",
@@ -22,8 +24,9 @@ const router = createBrowserRouter([
     element: <ProductDetail />,
     loader: ({ params }) => {
       return itemDetailLoader(params.id!);
-    }
-  }
+    },
+    errorElement: <Error />,
+  },
 ]);
 
 createRoot(document.getElementById("root")!).render(
