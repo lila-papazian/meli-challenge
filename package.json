@@ -1,6 +1,9 @@
 {
   "name": "papazian-meli-challenge",
-  "author": {"name": "Lila Papazian", "email": "lilapapazian@gmail.com"},
+  "author": {
+    "name": "Lila Papazian",
+    "email": "lilapapazian@gmail.com"
+  },
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +13,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -41,7 +45,8 @@
     "storybook": "^8.2.9",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "vitest": "^2.0.5"
   },
   "eslintConfig": {
     "extends": [
